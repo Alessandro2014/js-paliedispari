@@ -9,7 +9,9 @@ Dichiariamo chi ha vinto
 3 generare funzione per numero random da 1 a 5
 4 creare variante somma
 5 creare funzione di somma 
-6 stampare in pagina chi ha vinto*/
+6 funzione per stabiliore se la somma è pari o dispari
+7 stampare in pagina chi ha vinto*/
+
 
 var userChoice = prompt("Scegli tra Pari o Dispari", "Pari");
 var userNumber = parseInt(prompt("Scegli un numero da 1 a 5", "2"));
@@ -21,6 +23,21 @@ console.log("scelta random " + random);
 var sum = userNumber + random;
 console.log(sum);
 
+var even = isEven(sum);
+console.log(even);
+
+// funzione verifica pari o dispari
+function isEven(number) {
+    var isEven;
+    if (number % 2 === 0){
+        isEven = true;
+     } else {  
+         isEven = false; 
+    }
+    return isEven;
+}
+
+// funzione numero random
 function randomNumber() {
     var number = Math.floor(Math.random() * 5) + 1;
     return number;
