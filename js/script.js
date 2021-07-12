@@ -12,7 +12,9 @@ Dichiariamo chi ha vinto
 6 funzione per stabiliore se la somma è pari o dispari
 7 stampare in pagina chi ha vinto*/
 
+var exercise = document.getElementById("exsercise");
 
+//richiesta informazioni
 var userChoice = prompt("Scegli tra Pari o Dispari", "Pari");
 var userNumber = parseInt(prompt("Scegli un numero da 1 a 5", "2"));
 var random = randomNumber();
@@ -20,19 +22,24 @@ console.log("scelta utente " + userChoice);
 console.log("scelta numero " + userNumber);
 console.log("scelta random " + random);
 
+//somma numero utente e numero random
 var sum = userNumber + random;
-console.log(sum);
+console.log("La somma è: " + sum);
 
 var even = isEven(sum);
-console.log(even);
+
+//stabilire chi ha vinto
+if (userChoice === "Pari" && even === true) {
+    exsercise.innerHTML = "Hai vinto";
+}   else { 
+    exsercise.innerHTML = "Hai perso";
+}
 
 // funzione verifica pari o dispari
 function isEven(number) {
-    var isEven;
+    var isEven = false;
     if (number % 2 === 0){
         isEven = true;
-     } else {  
-         isEven = false; 
     }
     return isEven;
 }
