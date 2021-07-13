@@ -1,5 +1,9 @@
 /*Chiedere all’utente di inserire una parola
-Creare una funzione per capire se la parola inserita è palindroma */
+Creare una funzione per capire se la parola inserita è palindroma 
+1 richiesta parola
+2 creazione funzione tramite ciclo while
+3 verifica constampa risultato*/
+
 
 var exercise = document.getElementById("exsercise");
 
@@ -8,19 +12,19 @@ var userChoice = prompt("Scegli una parola");
 var word = userChoice;
 var wordReverse = reverse(word);
 
+//VERIFICA DEL RISULTATO OTTENUTO
 if(word == wordReverse){
     exsercise.innerHTML = "La parola inserita è palindroma";
   } else {
     exsercise.innerHTML ="La parola inserita non è palindroma";
 }
 
-function reverse(str){
+// FUNZIONE TRAMITE CICLO WHILE
+function reverse(word){
   var wordReverse = '';
-
-  var i = str.length - 1;
-
+  var i = word.length - 1;
   while (i >= 0) {
-    wordReverse += str[i];
+    wordReverse += word[i];
     i--;
   }
 
