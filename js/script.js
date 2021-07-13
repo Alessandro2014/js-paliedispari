@@ -15,7 +15,7 @@ Dichiariamo chi ha vinto
 var exercise = document.getElementById("exsercise");
 
 //richiesta informazioni
-var userChoice = prompt("Scegli tra Pari o Dispari", "Pari");
+var userChoice = prompt("Scegli tra Pari o Dispari", "Pari").trim().toLowerCase();
 var userNumber = parseInt(prompt("Scegli un numero da 1 a 5", "2"));
 var random = randomNumber();
 console.log("scelta utente " + userChoice);
@@ -29,7 +29,7 @@ console.log("La somma è: " + sum);
 var even = isEven(sum);
 
 //stabilire chi ha vinto
-if (userChoice === "Pari" && even === true) {
+if (userChoice === "pari" && even === true) {
     exsercise.innerHTML = "Hai vinto";
 }   else { 
     exsercise.innerHTML = "Hai perso";
